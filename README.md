@@ -12,7 +12,7 @@ Python & Biopython: for sequence manipulation and automation.
 
 R/ggplot2 (optional): for plotting filtered motif counts.
 
-🧾 Workflow Summary
+Workflow Summary
 Extracted 1000 bp upstream promoter regions using NCBI gene coordinates.
 
 Aligned orthologous promoter sequences to assess conservation.
@@ -23,7 +23,7 @@ Filtered motifs by q-value (<0.05) and genomic location (within -1000 bp).
 
 Compared motif content across species and gene groups.
 
-📈 Preliminary Results
+Preliminary Results
 Alignments show conservation near TSS.
 
 Filtered motifs vary by species and gene group.
