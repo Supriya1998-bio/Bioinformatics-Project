@@ -1,31 +1,44 @@
-# Bioinformatics-Project
-This repository contains scripts, results, and documentation for the comparative analysis of transcription factor (TF) binding motifs in the 1000 bp upstream promoter regions of melanocyte-related and SRY-box–related genes in Danio rerio (zebrafish) and Xiphophorus maculatus (platyfish). The goal is to identify conserved regulatory elements involved in pigmentation and development.
+This repository contains scripts, results, and documentation for the comparative analysis of transcription factor (TF) binding motifs in the 1000 bp upstream promoter regions of melanoma-associated genes in Danio rerio (zebrafish) and Xiphophorus maculatus (platyfish).
+The aim is to identify conserved and species-specific regulatory elements that may contribute to differences in melanoma susceptibility.
 
 🛠 Tools & Methods
-FIMO (MEME Suite): motif scanning using JASPAR 2024 vertebrate database.
 
-JASPAR: curated TF motif database.
+FIMO (MEME Suite): motif scanning with the JASPAR 2024 vertebrate motif database.
 
-MUSCLE + NIMBOSHade: sequence alignment and visualisation.
+JASPAR 2024: curated transcription factor binding profiles.
 
-Python & Biopython: for sequence manipulation and automation.
+MUSCLE + NIMBOSHade: multiple sequence alignment and visualization of promoter regions.
 
-R/ggplot2 (optional): for plotting filtered motif counts.
+Python (pandas, matplotlib, matplotlib-venn, numpy): motif filtering, statistical analysis, Venn diagrams, bar plots, and scatter plots.
 
-Workflow Summary
-Extracted 1000 bp upstream promoter regions using NCBI gene coordinates.
+GitHub repository: contains code, summary tables, and figures for reproducibility.
 
-Aligned orthologous promoter sequences to assess conservation.
+🔬 Workflow Summary
 
-Scanned promoter sequences with FIMO using JASPAR 2024 motifs.
+Selected 10 melanoma-associated genes (e.g., mitf, sox10, braf, cdkn2a/b, zeb1a).
 
-Filtered motifs by q-value (<0.05) and genomic location (within -1000 bp).
+Extracted 1000 bp upstream promoter sequences from Ensembl (canonical transcripts).
 
-Compared motif content across species and gene groups.
+Aligned orthologous promoter sequences (zebrafish vs platyfish) using MUSCLE and visualized conserved regions in NIMBOSHade.
 
-Preliminary Results
-Alignments show conservation near TSS.
+Scanned promoter regions with FIMO (q-value < 0.05 threshold).
 
-Filtered motifs vary by species and gene group.
+Filtered motifs within the -1000 bp promoter window.
 
-Shared motifs identified between orthologous genes, suggesting conserved regulation.
+Compared motif sets across species using Venn diagrams.
+
+Analyzed motif proximity to TSS (<100 bp vs ≥100 bp) with bar plots and scatter plots.
+
+Prioritized candidate TF–gene pairs (<100 bp, lowest q-values) for future protein–DNA docking studies.
+
+📊 Key Results
+
+Conservation: Several genes (e.g., zeb1a) showed conserved motifs (BPC1, BPC5, Klf15, PRDM9) across both species.
+
+Species-specific regulation: Some genes (e.g., cdkn2a/b, sox10) displayed minimal overlap, indicating divergent regulation.
+
+Proximity analysis: Platyfish sox10 had a dense cluster of >100 proximal motifs, suggesting strong promoter activity.
+
+Candidate interactions: High-confidence pairs included sox10–BPC1/BPC6 (platyfish), braf–BPC1/BPC5 (zebrafish), and zeb1a–Klf15 (zebrafish).
+
+👉 This repository provides a reproducible framework for comparative promoter motif analysis and identifies candidate transcriptional regulators that may influence melanoma susceptibility in fish models.
