@@ -1,0 +1,11 @@
+gene	zf_q_filtered_TFs	pf_q_filtered_TFs	shared_TF_count	shared_TF_names
+braf	11	14	1	BPC5
+cdkn2a/b	6	3	0	
+cdkn2aip	10	50	0	
+e2f1	13	10	0	
+foxo3b	7	8	2	BPC1, daf-12
+mitf	3	7	1	Klf15
+sox10	7	14	0	
+stat5a	9	3	0	
+tp53bp2	16	18	0	
+zeb1a	18	10	5	BPC1, BPC5, BPC6, Klf15, PRDM9
